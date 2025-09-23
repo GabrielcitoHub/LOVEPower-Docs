@@ -8,6 +8,7 @@ https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-
 
 Supported:
 - Wiimote
+
 Not Supported:
 - Audio
 - Data
@@ -18,6 +19,7 @@ Not Supported:
 - Physics
 - System
 - Timer
+
 Work In Progress:
 - Mii
 
