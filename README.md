@@ -1,5 +1,6 @@
 # VSC Lua Documentation for LoveWii
 Lua Sumneko and Love2D are required for this to work
+
 https://marketplace.visualstudio.com/items?itemName=sumneko.lua
 
 https://love2d.org
