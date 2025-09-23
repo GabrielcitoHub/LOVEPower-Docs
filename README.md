@@ -6,6 +6,7 @@ https://marketplace.visualstudio.com/items?itemName=sumneko.lua
 https://love2d.org
 
 Pixelbyte Love2D (optional but recommended)
+
 https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d
 
 Supported:
