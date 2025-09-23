@@ -1,3 +1,7 @@
+# Disclaimer! 
+# This is unnofficial documentation of LoveWii and is not officially mantained by GuglioIsStupid or any other member of WiiLove
+# this was made purely out of boredoom, if you find any error within the extension please open an issue
+
 # VSC Lua Documentation for LoveWii
 
 LoveWii
