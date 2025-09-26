@@ -1,6 +1,7 @@
 # Disclaimer! 
-# This is unnofficial documentation of LoveWii and is not officially mantained by GuglioIsStupid or any other member of WiiLove
-# this was made purely out of boredoom, if you find any error within the extension please open an issue
+This is unnofficial documentation of LoveWii and is not officially mantained by GuglioIsStupid or any other member of WiiLove
+
+this was made purely out of boredoom, if you find any error within the extension please open an issue
 
 # VSC Lua Documentation for LoveWii
 
@@ -35,9 +36,12 @@ Not Supported:
 Work In Progress:
 - Mii
 
-# How to use:
+# Warning!
 
-# Warning! If you already have a .vscode/settings.json this will replace it, Save a copy of your settings.json outside of .vscode/ before trying this, please
+If you already have a .vscode/settings.json this will replace it, Save a copy of your settings.json outside of .vscode/ before trying this, please
+
+
+# How to use:
 
 if it works but you had more things added to settings.json you'll have to add these to the new file manually
 
