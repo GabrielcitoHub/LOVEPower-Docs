@@ -14,6 +14,9 @@
 ---| "classic_zr"
 ---| "classic_home"
 
+local rawAxis = {0, 0}
+local axis = {0.0, 0.0}
+
 local wiimote = {}
 
     -- Checks if the Wiimote is connected
@@ -21,9 +24,9 @@ local wiimote = {}
     function wiimote:isConnected()
     end
 
-    -- Updates the Wiimote... though i don't think you should use this
-    function wiimote:update()
-    end
+    -- -- Updates the Wiimote... though i don't think you should use this
+    -- function wiimote:update()
+    -- end
 
     -- Gets the Wiimote x position
     ---@return number|nil x Wiimote X Position
@@ -51,12 +54,12 @@ local wiimote = {}
     end
 
     -- Gets the Wiimote tweened x position... i think?
-    ---@return integer|nil smoothX Wiimote Tweened X Position
+    ---@return number|nil smoothX Wiimote Tweened X Position
     function wiimote:getSmoothX()
     end
 
     -- Gets the Wiimote tweened y position... i think?
-    ---@return integer|nil smoothY Wiimote Tweened Y Position
+    ---@return number|nil smoothY Wiimote Tweened Y Position
     function wiimote:getSmoothY()
     end
 
@@ -66,12 +69,12 @@ local wiimote = {}
     end
 
     -- Gets the Wiimote dx position
-    ---@return integer|nil dx Wiimote DX Position
+    ---@return number|nil dx Wiimote DX Position
     function wiimote:getDX()
     end
 
     -- Gets the Wiimote dy position
-    ---@return integer|nil dy Wiimote DY Position
+    ---@return number|nil dy Wiimote DY Position
     function wiimote:getDY()
     end
 
@@ -88,8 +91,8 @@ local wiimote = {}
     end
 
     -- Gets the position of the Wiimote but tweened... i think?
-    ---@return integer|nil smoothX Wiimote Smooth X
-    ---@return integer|nil smoothY Wiimote Smooth Y
+    ---@return number|nil smoothX Wiimote Smooth X
+    ---@return number|nil smoothY Wiimote Smooth Y
     function wiimote:getSmoothPosition()
     end
 
@@ -114,27 +117,27 @@ local wiimote = {}
     end
 
     -- Gets the Wiimote absolute roll
-    ---@return integer|nil absoluteRoll Absolute Wiimote Roll
+    ---@return number|nil absoluteRoll Absolute Wiimote Roll
     function wiimote:getAbsoluteRoll()
     end
 
     -- Gets the Wiimote absolute pitch
-    ---@return integer|nil absolutePitch Absolute Wiimote Pitch
+    ---@return number|nil absolutePitch Absolute Wiimote Pitch
     function wiimote:getAbsolutePitch()
     end
 
     -- Gets the Wiimote g force x
-    ---@return integer|nil gForceX Wiimote G force X
+    ---@return number|nil gForceX Wiimote G force X
     function wiimote:getGforceX()
     end
 
     -- Gets the Wiimote g force y
-    ---@return integer|nil gForceY Wiimote G force Y
+    ---@return number|nil gForceY Wiimote G force Y
     function wiimote:getGforceY()
     end
 
     -- Gets the Wiimote g force z
-    ---@return integer|nil gForceZ Wiimote G force Z
+    ---@return number|nil gForceZ Wiimote G force Z
     function wiimote:getGforceZ()
     end
 
@@ -164,8 +167,8 @@ local wiimote = {}
     function wiimote:setMotionPlus(motionPlus)
     end
 
-    -- Checks if the Wiimote has a Classic Controller
-    ---@return boolean|nil hasPlus If the Wiimote has Motion Plus is connected
+    -- Checks if the Wiimote has Motion Plus
+    ---@return boolean|nil hasPlus If the Wiimote has Motion Plus Connected
     function wiimote:getMotionPlus()
     end
     
@@ -176,17 +179,17 @@ local wiimote = {}
     end
 
     -- Gets the Nunchuk X position
-    ---@return integer|nil x Nunchuk X Position
+    ---@return number|nil x Nunchuk X Position
     function wiimote:getNunchukX()
     end
 
     -- Gets the Nunchuk Y position
-    ---@return integer|nil y Nunchuk Y Position
+    ---@return number|nil y Nunchuk Y Position
     function wiimote:getNunchukY()
     end
 
     -- Gets the Nunchuk Y position
-    ---@return integer|nil z Nunchuk Z Position
+    ---@return number|nil z Nunchuk Z Position
     function wiimote:getNunchukZ()
     end
 
@@ -208,12 +211,14 @@ local wiimote = {}
     -- Gets the position of the Nunchuk
     ---@return number|nil x Nunchuk X
     ---@return number|nil y Nunchuk Y
+    ---@return number|nil z Nunchuk Z
     function wiimote:getNunchukPosition()
     end
 
     -- Gets the raw position of the Nunchuk
     ---@return integer|nil rawX Nunchuk Raw X
     ---@return integer|nil rawY Nunchuk Raw Y
+    ---@return integer|nil rawZ Nunchuk Raw Z
     function wiimote:getNunchukPositionRaw()
     end
 
@@ -233,17 +238,17 @@ local wiimote = {}
     end
 
     -- Gets the Nunchuk g force x
-    ---@return integer|nil gForceX Nunchuk G force X
+    ---@return number|nil gForceX Nunchuk G force X
     function wiimote:getNunchukGforceX()
     end
 
     -- Gets the Nunchuk g force y
-    ---@return integer|nil gForceY Nunchuk G force Y
+    ---@return number|nil gForceY Nunchuk G force Y
     function wiimote:getNunchukGforceY()
     end
 
     -- Gets the Nunchuk g force z
-    ---@return integer|nil gForceZ Nunchuk G force Z
+    ---@return number|nil gForceZ Nunchuk G force Z
     function wiimote:getNunchukGforceZ()
     end
 
@@ -267,13 +272,17 @@ local wiimote = {}
     function wiimote:getNunchukJoystickY()
     end
 
-    -- Gets the Nunchuk Joystick Axis Raw Position.
-    -- No return values cause im not sure how this one works myself
+    -- Gets the Nunchuk Joystick Raw Axis.
+    ---@return integer|nil rawAxisX Nunchuk Raw X Axis
+    ---@return integer|nil rawAxisY Nunchuk Raw Y Axis
     function wiimote:getNunchukJoystickAxisRaw()
     end
 
+-- Very cool and non-weird looking bookmark
+
     -- Gets the Nunchuk Joystick Axis Position.
-    -- No return values cause im not sure how this one works myself
+    ---@return number|nil axisX Nunchuk X Axis
+    ---@return number|nil axisY Nunchuk Y Axis
     function wiimote:getNunchukJoystickAxis()
     end
 
@@ -304,7 +313,8 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Left Joystick
-    -- No return values cause im not sure how this one works myself
+    ---@return number|nil leftAxisX Classic Left Joystick X Axis
+    ---@return number|nil leftAxisY Classic Left Joystick Y Axis
     function wiimote:getClassicLeftJoystick()
     end
 
@@ -329,13 +339,15 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Right Joystick
-    -- No return values cause im not sure how this one works myself
+    ---@return number|nil rightAxisX Classic Right Joystick X Axis
+    ---@return number|nil rightAxisY Classic Right Joystick Y Axis
     function wiimote:getClassicRightJoystick()
     end
 
     -- Gets the Classic Controller Axis Raw
     -- No return values cause im not sure how this one works myself
     function wiimote:getClassicAxisRaw()
+        return rawAxis, rawAxis
     end
 
     -- Gets the Classic Controller Axis
