@@ -1,13 +1,13 @@
 # Disclaimer! 
-This is unnofficial documentation of LoveWii and is not officially mantained by GuglioIsStupid or any other member of WiiLove
+This is unnofficial documentation of PowerLove and is not officially mantained by GuglioIsStupid or any other member of it
 
 this was made purely out of boredoom, if you find any error within the extension please open an issue
 
-# VSC Lua Documentation for LoveWii
+# VSC Lua Documentation for PowerLove
 
-LoveWii
+PowerLove
 
-https://github.com/GuglioIsStupid/LoveWii
+https://github.com/GuglioIsStupid/PowerLove
 
 Lua Sumneko and Love2D are required for this to work
 
