@@ -1,13 +1,13 @@
 # Disclaimer! 
-This is unnofficial documentation of LovePower and is not officially mantained by GuglioIsStupid or any other member of it
+This is unnofficial documentation of LOVEPower and is not officially mantained by GuglioIsStupid or any other member of it
 
 this was made purely out of boredoom, if you find any error within the extension please open an issue
 
-# VSC Lua Documentation for LovePower
+# VSC Lua Documentation for LOVEPower
 
-LovePower
+LOVEPower
 
-https://github.com/GuglioIsStupid/LovePower
+https://github.com/GuglioIsStupid/LOVEPower
 
 Lua Sumneko and Love2D are required for this to work
 
