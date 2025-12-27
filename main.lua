@@ -3,7 +3,7 @@ local board
 local leftAxis, RightAxis
 
 function love.update(dt)
-    wiimote = wiimote or love.wiimote.getWiimote(3)
+    wiimote = wiimote or love.wiimote.getWiimote(1)
     board = board or love.wiimote:getBalanceBoard()
     leftAxis, RightAxis = wiimote:getNunchukJoystickAxisRaw()
 end
