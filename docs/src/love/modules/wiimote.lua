@@ -24,9 +24,10 @@ local wiimote = {}
     function wiimote:isConnected()
     end
 
-    -- -- Updates the Wiimote... though i don't think you should use this
-    -- function wiimote:update()
-    -- end
+    -- Updates the Wiimote... though i don't think you should use this
+    ---@deprecated
+    function wiimote:update()
+    end
 
     -- Gets the Wiimote x position
     ---@return number|nil x Wiimote X Position
@@ -272,13 +273,11 @@ local wiimote = {}
     function wiimote:getNunchukJoystickY()
     end
 
-    -- Gets the Nunchuk Joystick Raw Axis.
+    -- Gets the Nunchuk Joystick Raw Axis Position.
     ---@return integer|nil rawAxisX Nunchuk Raw X Axis
     ---@return integer|nil rawAxisY Nunchuk Raw Y Axis
     function wiimote:getNunchukJoystickAxisRaw()
     end
-
--- Very cool and non-weird looking bookmark
 
     -- Gets the Nunchuk Joystick Axis Position.
     ---@return number|nil axisX Nunchuk X Axis
@@ -293,23 +292,29 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Left Joystick X Raw Position
-    ---@return integer|nil joystickLeftRawX Classic Controller Left Joystick Raw X Position
+    ---@return number|nil joystickLeftRawX Classic Controller Left Joystick Raw X Position
     function wiimote:getClassicLeftJoystickRawX()
     end
 
     -- Gets the Classic Controller Left Joystick Y Raw Position
-    ---@return integer|nil joystickLeftRawY Classic Controller Left Joystick Raw Y Position
+    ---@return number|nil joystickLeftRawY Classic Controller Left Joystick Raw Y Position
     function wiimote:getClassicLeftJoystickRawY()
     end
 
     -- Gets the Classic Controller Left Joystick X Position
-    ---@return integer|nil joystickLeftX Classic Controller Left Joystick X Position
+    ---@return number|nil joystickLeftX Classic Controller Left Joystick X Position
     function wiimote:getClassicLeftJoystickX()
     end
 
     -- Gets the Classic Controller Left Joystick Y Position
-    ---@return integer|nil joystickLeftY Classic Controller Left Joystick Y Position
+    ---@return number|nil joystickLeftY Classic Controller Left Joystick Y Position
     function wiimote:getClassicLeftJoystickY()
+    end
+
+    -- Gets the Classic Controller Raw Left Joystick (this one is not yet implemented as far as i know)
+    ---@return number|nil leftAxisRawX Classic Left Joystick Raw X Axis
+    ---@return number|nil leftAxisRawY Classic Left Joystick Raw Y Axis
+    function wiimote:getClassicLeftJoystickRaw()
     end
 
     -- Gets the Classic Controller Left Joystick
@@ -319,23 +324,29 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Right Joystick X Raw Position
-    ---@return integer|nil joystickRightRawX Classic Controller Right Joystick Raw X Position
+    ---@return number|nil joystickRightRawX Classic Controller Right Joystick Raw X Position
     function wiimote:getClassicRightJoystickRawX()
     end
 
     -- Gets the Classic Controller Right Joystick Y Raw Position
-    ---@return integer|nil joystickRightRawY Classic Controller Right Joystick Raw Y Position
+    ---@return number|nil joystickRightRawY Classic Controller Right Joystick Raw Y Position
     function wiimote:getClassicRightJoystickRawY()
     end
 
     -- Gets the Classic Controller Right Joystick X Position
-    ---@return integer|nil joystickRightX Classic Controller Right Joystick X Position
+    ---@return number|nil joystickRightX Classic Controller Right Joystick X Position
     function wiimote:getClassicRightJoystickX()
     end
 
     -- Gets the Classic Controller Right Joystick Y Position
-    ---@return integer|nil joystickRightY Classic Controller Right Joystick Y Position
+    ---@return number|nil joystickRightY Classic Controller Right Joystick Y Position
     function wiimote:getClassicRightJoystickY()
+    end
+
+    -- Gets the Classic Controller Raw Right Joystick (this one is not yet implemented as far as i know)
+    ---@return number|nil rightAxisRawX Classic Right Joystick Raw X Axis
+    ---@return number|nil rightAxisRawY Classic Right Joystick Raw Y Axis
+    function wiimote:getClassicRightJoystickRaw()
     end
 
     -- Gets the Classic Controller Right Joystick
@@ -345,23 +356,25 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Axis Raw
-    -- No return values cause im not sure how this one works myself
+    ---@return table rawAxis
+    ---@return table rawAxis
     function wiimote:getClassicAxisRaw()
         return rawAxis, rawAxis
     end
 
     -- Gets the Classic Controller Axis
-    -- No return values cause im not sure how this one works myself
+    ---@return table axis
+    ---@return table axis
     function wiimote:getClassicAxis()
     end
 
     -- Gets the Classic Controller Left Shoulder
-    -- No return values cause im not sure how this one works myself
+    ---@return number|nil leftShoulder Classic left shoulder
     function wiimote:getClassicLeftShoulder()
     end
 
     -- Gets the Classic Controller Right Shoulder
-    -- No return values cause im not sure how this one works myself
+    ---@return number|nil rightShoulder Classic right shoulder
     function wiimote:getClassicRightShoulder()
     end
 
@@ -369,12 +382,15 @@ local wiimotes = {wiimote, wiimote, wiimote, wiimote}
 
 local board = {}
 
+-- Very cool and non-weird looking bookmark
+
     -- Checks if the Wii Board is connected
     ---@return boolean|nil boardConnected If the Wii Board is connected
     function board:isConnected()
     end
 
     -- Updates the Wii Board... though i don't think you should use this
+    ---@deprecated
     function board:update()
     end
 
@@ -454,7 +470,7 @@ local board = {}
     function board:getBalance()
     end
 
-    -- Gets the Wii Board current battery (from 1.00 to 0.00)
+    -- Gets the Wii Board current battery (from 1.0 to 0.0)
     ---@return number|nil boardBattery Wii Board current battery
     function board:getBatteryLevel()
     end
