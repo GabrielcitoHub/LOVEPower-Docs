@@ -2,17 +2,36 @@
 --- Love Wii Wiimote module
 
 ---@alias WIIMOTE_BUTTONS
----| "a"
----| "b"
----| "home"
----| "classic_home"
----| "classic_a"
----| "classic_b"
----| "classic_x"
----| "classic_y"
----| "classic_zl"
----| "classic_zr"
----| "classic_home"
+---| "a"             Wiimote
+---| "b"             Wiimote
+---| "1"             Wiimote
+---| "2"             Wiimote
+---| "home"          Wiimote
+---| "plus"          Wiimote
+---| "minus"         Wiimote
+---| "home"          Wiimote
+---| "up"            Wiimote
+---| "down"          Wiimote
+---| "left"          Wiimote
+---| "right"         Wiimote
+---| "c"             Nunchuk
+---| "z"             Nunchuk
+---| "classic_home"  Classic
+---| "classic_a"     Classic
+---| "classic_b"     Classic
+---| "classic_x"     Classic
+---| "classic_y"     Classic
+---| "classic_zl"    Classic
+---| "classic_zr"    Classic
+---| "classic_plus"  Classic
+---| "classic_minus" Classic
+---| "classic_up"    Classic
+---| "classic_down"  Classic
+---| "classic_left"  Classic
+---| "classic_right" Classic
+---| "classic_l"     Classic
+---| "classic_r"     Classic
+---
 
 local rawAxis = {0, 0}
 local axis = {0.0, 0.0}
