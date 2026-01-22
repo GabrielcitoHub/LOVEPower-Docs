@@ -33,8 +33,9 @@
 ---| "classic_r"     Classic
 ---
 
-local rawAxis = {0, 0}
-local axis = {0.0, 0.0}
+--[[ local rawAxis = {0, 0}
+local axis = {0.0, 0.0} ]]
+---@alias AXIS table<number, number>
 
 local wiimote = {}
 
@@ -68,13 +69,13 @@ local wiimote = {}
     function wiimote:getRawY()
     end
 
-    -- Gets the Wiimote tweened x position... i think?
-    ---@return number|nil smoothX Wiimote Tweened X Position
+    -- Gets the Wiimote smoothed X position of the Wiimote
+    ---@return number|nil smoothX Wiimote Smoothed X Position
     function wiimote:getSmoothX()
     end
 
-    -- Gets the Wiimote tweened y position... i think?
-    ---@return number|nil smoothY Wiimote Tweened Y Position
+    -- Gets the Wiimote smoothed Y position of the Wiimote
+    ---@return number|nil smoothY Wiimote Smoothed Y Position
     function wiimote:getSmoothY()
     end
 
@@ -96,16 +97,18 @@ local wiimote = {}
     -- Gets the position of the Wiimote
     ---@return number|nil x Wiimote X
     ---@return number|nil y Wiimote Y
+    ---@return number|nil z Wiimote Z
     function wiimote:getPosition()
     end
 
     -- Gets the raw position of the Wiimote
     ---@return integer|nil rawX Wiimote Raw X
     ---@return integer|nil rawY Wiimote Raw Y
+    ---@return integer|nil rawZ Wiimote Raw Z
     function wiimote:getRawPosition()
     end
 
-    -- Gets the position of the Wiimote but tweened... i think?
+    -- Gets the position smoothed position of the Wiimote
     ---@return number|nil smoothX Wiimote Smooth X
     ---@return number|nil smoothY Wiimote Smooth Y
     function wiimote:getSmoothPosition()
@@ -186,7 +189,6 @@ local wiimote = {}
     ---@return boolean|nil hasPlus If the Wiimote has Motion Plus Connected
     function wiimote:getMotionPlus()
     end
-    
 
     -- Checks if the Wiimote has a Nunchuk Controller
     ---@return boolean|nil hasNunchuk If the Nunchuk is connected
@@ -370,15 +372,12 @@ local wiimote = {}
     end
 
     -- Gets the Classic Controller Axis Raw
-    ---@return table rawAxis
-    ---@return table rawAxis
+    ---@return table<AXIS, AXIS> axisRaw
     function wiimote:getClassicAxisRaw()
-        return rawAxis, rawAxis
     end
 
     -- Gets the Classic Controller Axis
-    ---@return table axis
-    ---@return table axis
+    ---@return table<AXIS, AXIS> axis
     function wiimote:getClassicAxis()
     end
 
@@ -500,7 +499,10 @@ local board = {}
     end
 
     -- Gets the calibration data of the Wii Board
-    -- No return values cause im not sure how this one works myself
+    ---@return table<integer, integer, integer> topLeftWeight
+    ---@return table<integer, integer, integer> topRightWeight
+    ---@return table<integer, integer, integer> bottomLeftWeight
+    ---@return table<integer, integer, integer> bottomRightWeight
     function board:getCalibrationData()
     end
 
