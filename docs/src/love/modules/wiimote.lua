@@ -24,11 +24,6 @@ local wiimote = {}
     function wiimote:isConnected()
     end
 
-    -- Updates the Wiimote... though i don't think you should use this
-    ---@deprecated
-    function wiimote:update()
-    end
-
     -- Gets the Wiimote x position
     ---@return number|nil x Wiimote X Position
     function wiimote:getX()
@@ -387,11 +382,6 @@ local board = {}
     -- Checks if the Wii Board is connected
     ---@return boolean|nil boardConnected If the Wii Board is connected
     function board:isConnected()
-    end
-
-    -- Updates the Wii Board... though i don't think you should use this
-    ---@deprecated
-    function board:update()
     end
 
     -- Gets the top left weight of the Wii Board
