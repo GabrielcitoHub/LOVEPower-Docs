@@ -108,7 +108,7 @@ local wiimote = {}
     function wiimote:getRawPosition()
     end
 
-    -- Gets the position smoothed position of the Wiimote
+    -- Gets the smoothed position of the Wiimote
     ---@return number|nil smoothX Wiimote Smooth X
     ---@return number|nil smoothY Wiimote Smooth Y
     function wiimote:getSmoothPosition()
