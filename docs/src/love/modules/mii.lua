@@ -71,7 +71,7 @@ local mii = {}
     function mii:creator()
     end
 
---- Love Wii Mii module
+--- Love Power Mii module
 ---@class love.mii
 love.mii = {}
 
