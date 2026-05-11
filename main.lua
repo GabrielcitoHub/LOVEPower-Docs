@@ -7,6 +7,14 @@ end
 function love.draw()
     love.graphics.print("Left Axis: " .. LeftAxis .. "\nRight Axis: " .. RightAxis, 10, 10)
     if Wiimote:hasNunchuk() then
-        print("NUNCHUK!!", 50, 50)
+        local text = "NUNCHUK!!"
+        local o = 50
+        local ox, oy = o, o
+        print(text, ox, oy)
+        love.graphics.print(text, ox, oy)
+    end
+
+    if Wiimote:isDown("2") then
+        love.graphics.print("2 is being pressed!!", 50, 70)
     end
 end
