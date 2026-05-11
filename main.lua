@@ -1,10 +1,6 @@
-local wiimote
-local board
-local leftAxis, RightAxis
-
 function love.update(dt)
-    wiimote = wiimote or love.wiimote.getWiimote(1)
-    board = board or love.wiimote:getBalanceBoard()
+    wiimote = love.wiimote.getWiimote(1)
+    board = love.wiimote:getBalanceBoard()
     leftAxis, RightAxis = wiimote:getNunchukJoystickAxisRaw()
 end
 
@@ -14,4 +10,3 @@ function love.draw()
         print("NUNCHUK!!", 50, 50)
     end
 end
-

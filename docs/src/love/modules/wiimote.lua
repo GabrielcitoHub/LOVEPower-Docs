@@ -495,21 +495,21 @@ local board = {}
     function board:getCalibrationData()
     end
 
---- Love Wii Wiimote module
+--- Love Power Wiimote module
 ---@class love.wiimote
 love.wiimote = {}
 
--- Gets a Wiimote Object (1-4)
+-- Gets a Wiimote object (1-4)
 function love.wiimote.getWiimote(id)
     return wiimote
 end
 
--- Gets Wiimotes Objects
+-- Gets all Wiimote objects (1-4)
 function love.wiimote.getWiimotes()
     return wiimotes
 end
 
--- Gets the Wii Balance Board Object
+-- Gets the Wii Balance Board object
 function love.wiimote.getBalanceBoard()
     return board
 end
